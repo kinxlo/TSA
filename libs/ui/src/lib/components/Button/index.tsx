@@ -7,5 +7,5 @@ type ButtonProps = ComponentProps<'button'> & {
 };
 
 export const TsaButton = ({ name, base, outline, ...props }: ButtonProps) => {
-  return <button {...props} children={name} />;
+  return <button className={`bg-blue-300`} {...props} children={name} />;
 };
