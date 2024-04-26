@@ -12,11 +12,15 @@ export default meta;
 type Story = StoryObj<typeof TsaButton>;
 
 export const Primary = {
-  args: {},
+  args: {
+    name: `Button`,
+  },
 };
 
-export const Heading: Story = {
-  args: {},
+export const Base: Story = {
+  args: {
+    name: `Button`,
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/Welcome to TsaButton!/gi)).toBeTruthy();
