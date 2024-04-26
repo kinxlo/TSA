@@ -44,6 +44,12 @@
       "options": {
         "lintFilePatterns": ["apps/web/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "typecheck": {
+      "command": "tsc"
+    },
+    "formatCode": {
+      "command": "prettier --write \"apps/web/**/*.+(js|json|ts|tsx)\""
     }
   }
 }
