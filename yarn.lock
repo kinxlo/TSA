@@ -2578,7 +2578,7 @@
     minimatch "9.0.3"
     tslib "^2.3.0"
 
-"@nx/storybook@18.3.4":
+"@nx/storybook@18.3.4", "@nx/storybook@^18.3.4":
   version "18.3.4"
   resolved "https://registry.yarnpkg.com/@nx/storybook/-/storybook-18.3.4.tgz#0b345bd79ab6bd9dfe969c65dd31ad5f66007d64"
   integrity sha512-EMDlWHw7FryhfQ/sM3oZY1kgUacjRIfXjfnTO56a5rigfppzxAd1tPoOaY0nS4FsEkMXmgLha53YxbAbP9bZNw==
