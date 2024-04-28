@@ -20,9 +20,13 @@ interface TsaNavbarProps extends AppBarProps {
   courses?: string[];
 }
 
-export function TsaNavbar({ navLinks, courses, ...rest }: TsaNavbarProps) {
+export const TsaNavbar: React.FC<TsaNavbarProps> = ({
+  navLinks,
+  courses,
+  ...rest
+}) => {
   return (
-    <AppBar {...rest} position={`fixed`}>
+    <AppBar position={`fixed`} {...rest}>
       <Container maxWidth="xl" sx={{ paddingInline: `none` }}>
         <Toolbar
           sx={{ justifyContent: `space-between`, alignItems: `center` }}
@@ -84,7 +88,7 @@ export function TsaNavbar({ navLinks, courses, ...rest }: TsaNavbarProps) {
             sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}
           >
             <TsaButton name={'Login'} />
-            <TsaButton variant={`text`} name={'Register'} color={`inherit`} />
+            <TsaButton color={`inherit`} variant={`text`} name={'Register'} />
           </Box>
           {/* mobile view */}
           <Typography
@@ -159,7 +163,7 @@ export function TsaNavbar({ navLinks, courses, ...rest }: TsaNavbarProps) {
       </Container>
     </AppBar>
   );
-}
+};
 
 const CourseMenu = ({ courses }: TsaNavbarProps) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

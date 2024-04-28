@@ -35,7 +35,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, './src/index.ts'),
       name: '@tsa/ui',
       fileName: 'ui',
-      // formats: ['es', 'cjs'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.

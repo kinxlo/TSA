@@ -1,15 +1,13 @@
 'use client';
 import React from 'react';
-import { Button, ButtonProps as MuiButtonProps } from '@mui/material';
-import { Icon } from '@iconify/react';
+import { Button, ButtonProps } from '@mui/material';
 
-interface TsaButtonProps extends MuiButtonProps {
+interface TsaButtonProps extends ButtonProps {
   name: string;
   variant?: 'text' | 'outlined' | 'contained';
   size?: 'small' | 'medium' | 'large';
   rightIcon?: any; // Change 'any' to the specific type of your icon component if possible
   leftIcon?: any; // Change 'any' to the specific type of your icon component if possible
-  onClick?: () => void; // Example for onClick event, adjust as needed
 }
 
 export const TsaButton: React.FC<TsaButtonProps> = ({
