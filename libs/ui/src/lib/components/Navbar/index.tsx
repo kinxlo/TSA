@@ -16,8 +16,8 @@ import { TsaButton } from '../Button';
 // const courses = ['frontend', 'backend', 'full stack'];
 
 interface TsaNavbarProps extends AppBarProps {
-  navLinks?: [];
-  courses?: [];
+  navLinks?: string[];
+  courses?: string[];
 }
 
 export function TsaNavbar({ navLinks, courses, ...rest }: TsaNavbarProps) {
