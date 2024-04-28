@@ -1,77 +1,206 @@
-// // import { extendTheme, Button, ChakraBaseProvider, Center, Flex, Link, Image, ListItem, UnorderedList } from "@chakra-ui/react";
-// // Assuming extendBaseTheme and theme are set up correctly
-// const theme = extendTheme({
-//     components: {
-//         Button,
-//     },
-// });
+import * as React from 'react';
+import AppBar, { AppBarProps } from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
 
-// export const TsaNavbar = () => {
-//     return (
-//         <ChakraBaseProvider theme={theme}>
-//             <Flex width={`100%`} justifyContent={`space-between`} alignItems={`center`} height={`5rem`} paddingInline={{ base: 4, xl: 0 }}>
-//                 <Center gap={4}>
-//                     <Link href={`/seller`} role={"link"}>
-//                         <Image
-//                             width={`7rem`}
-//                             alt='logo'
-//                             src={`https://techstudio.nyc3.cdn.digitaloceanspaces.com/External-page-assets/Images/logo-black.png`}
-//                         />
-//                     </Link>
-//                 </Center>
-//                 <UnorderedList listStyleType={`none`} display={`flex`} gap={5}>
-//                     <ListItem fontWeight={600}>About Us</ListItem>
-//                     {/* course menu */}
-//                     <ListItem fontWeight={600}>FAQs</ListItem>
-//                     <ListItem fontWeight={600}>Contact Us</ListItem>
-//                 </UnorderedList>
-//                 {/* Auth Buttons */}
-//                 {/* <Flex gap={5}>
-//                     <TsaButton children={`Login`} />
-//                     <TsaButton children={`Sign up`} />
-//                 </Flex> */}
-//             </Flex>
-//         </ChakraBaseProvider>
-//     );
-// };
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import { Icon } from '@iconify/react';
+import { TsaButton } from '../Button';
 
-// // export const links = [
-// //     {
-// //         id: 1,
-// //         name: `About Us`,
-// //         path: `/about-us`,
-// //         type: `link`,
-// //     },
-// //     {
-// //         id: 2,
-// //         name: `Courses`,
-// //         path: ``,
-// //         type: `dropdown`,
-// //         subLinks: [
-// //             { id: 1, name: `All`, path: `/explore` },
-// //             { id: 2, name: `3D`, path: `/explore/3d` },
-// //             { id: 3, name: `Audio`, path: `/explore/audio` },
-// //             { id: 4, name: `Business/Finance`, path: `/explore/finance` },
-// //             { id: 5, name: `Comics`, path: `/explore/comics` },
-// //             { id: 6, name: `Design`, path: `/explore/design` },
-// //             { id: 7, name: `Drawing/Painting`, path: `/explore/art` },
-// //             { id: 8, name: `Education`, path: `/explore/education` },
-// //         ],
-// //     },
-// //     {
-// //         id: 3,
-// //         name: `FAQ`,
-// //         path: `/faq`,
-// //         type: `link`,
-// //     },
-// //     {
-// //         id: 3,
-// //         name: `Contact Us`,
-// //         path: `/contact-us`,
-// //         type: `link`,
-// //     },
-// // ];
+// const pages = ['About Us', 'FAQs', 'Contact Us'];
+// const courses = ['frontend', 'backend', 'full stack'];
 
-export const TsaNavbar = () => {
-  return <div>index</div>;
+interface TsaNavbarProps extends AppBarProps {
+  navLinks?: [];
+  courses?: [];
+}
+
+export function TsaNavbar({ navLinks, courses, ...rest }: TsaNavbarProps) {
+  return (
+    <AppBar {...rest} position={`fixed`}>
+      <Container maxWidth="xl" sx={{ paddingInline: `none` }}>
+        <Toolbar
+          sx={{ justifyContent: `space-between`, alignItems: `center` }}
+          disableGutters
+        >
+          {/* desktop view */}
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            <img
+              src={
+                // color
+                //   ? `https://techstudio.nyc3.cdn.digitaloceanspaces.com/External-page-assets/Images/logo-black.png`
+                // : `
+                `https://techstudio.nyc3.cdn.digitaloceanspaces.com/External-page-assets/Images/logo-white.png`
+              }
+              alt="logo"
+            />
+          </Typography>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 5,
+            }}
+          >
+            {navLinks?.map((page, index) => (
+              <React.Fragment key={index}>
+                <Button
+                  sx={{
+                    my: 2,
+                    color: 'white',
+                    fontWeight: `bold`,
+                    display: 'block',
+                  }}
+                >
+                  {page}
+                </Button>
+                {index === 0 && <CourseMenu courses={courses} />}
+              </React.Fragment>
+            ))}
+          </Box>
+          <Box
+            gap={`1rem`}
+            sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}
+          >
+            <TsaButton name={'Login'} />
+            <TsaButton variant={`text`} name={'Register'} color={`inherit`} />
+          </Box>
+          {/* mobile view */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            <img
+              src={
+                // color
+                //   ? `https://techstudio.nyc3.cdn.digitaloceanspaces.com/External-page-assets/Images/logo-black.png`
+                // : `
+                `https://techstudio.nyc3.cdn.digitaloceanspaces.com/External-page-assets/Images/logo-white.png`
+              }
+              alt="logo"
+            />
+          </Typography>
+          <Box
+            width={`fit-content`}
+            sx={{ display: { xs: 'flex', md: 'none' } }}
+          >
+            <IconButton
+              size="medium"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              // onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <Icon icon="ri:menu-2-fill" />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              // anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              // open={Boolean(anchorElNav)}
+              // onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+              open={false}
+            >
+              {navLinks?.map((page) => (
+                <MenuItem
+                  key={page}
+                  //  onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+}
+
+const CourseMenu = ({ courses }: TsaNavbarProps) => {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  return (
+    <>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+        endIcon={<Icon icon={'mdi-light:chevron-down'} />}
+        variant="text"
+        sx={{ color: `#fff`, fontWeight: `bold` }}
+      >
+        Courses
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        {courses?.map((course) => {
+          return (
+            <MenuItem key={`course`} onClick={handleClose}>
+              {course}
+            </MenuItem>
+          );
+        })}
+      </Menu>
+    </>
+  );
 };

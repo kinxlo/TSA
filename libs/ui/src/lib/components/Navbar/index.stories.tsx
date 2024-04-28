@@ -1,24 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TsaNavbar } from './index';
-
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { TsaNavbar } from '.';
 
 const meta: Meta<typeof TsaNavbar> = {
   component: TsaNavbar,
   title: 'TsaNavbar',
+  tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof TsaNavbar>;
 
-export const Primary = {
+export const Base: Story = {
   args: {},
 };
-
-export const Heading: Story = {
-  args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to TsaNavbar!/gi)).toBeTruthy();
+export const BaseWithLinks: Story = {
+  args: {
+    navLinks: ['About Us', 'FAQs', 'Contact Us'],
+    courses: ['frontend', 'backend', 'full stack'],
   },
 };
