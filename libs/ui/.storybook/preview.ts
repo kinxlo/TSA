@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import { theme } from '../src/globalTheme';
+import { theme } from '../../../scss/custom/globalTheme';
+import "../../../scss/style.scss"
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -17,7 +18,7 @@ export const decorators = [
   withThemeFromJSXProvider({
     themes: {
       light: theme,
-      // dark: theme,
+      dark: theme,
     },
     defaultTheme: 'light',
     Provider: ThemeProvider,

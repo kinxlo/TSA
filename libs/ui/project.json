@@ -5,16 +5,5 @@
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project ui --web",
-  "targets": {
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
-    },
-    "typecheck": {
-      "command": "tsc --project libs/ui/components/timer/tsconfig.lib.json"
-    },
-    "formatCode": {
-      "command": "prettier --write  \"libs/ui/**/*.+(js|json|ts|tsx)\""
-    }
-  }
+  "targets": {}
 }

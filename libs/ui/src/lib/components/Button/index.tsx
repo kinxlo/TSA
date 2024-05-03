@@ -1,14 +1,15 @@
 'use client';
 import React from 'react';
-import { Button, ButtonProps } from '@mui/material';
+import { Button, ButtonProps, Typography, styled } from '@mui/material';
+import { TsaButtonProps } from '../../../utils/propTypes';
 
-interface TsaButtonProps extends ButtonProps {
-  name: string;
-  variant?: 'text' | 'outlined' | 'contained';
-  size?: 'small' | 'medium' | 'large';
-  rightIcon?: any; // Change 'any' to the specific type of your icon component if possible
-  leftIcon?: any; // Change 'any' to the specific type of your icon component if possible
-}
+const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  color: theme.palette.secondary.contrastText,
+  '&:hover': {
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.contrastText,
+  },
+}));
 
 export const TsaButton: React.FC<TsaButtonProps> = ({
   name,
@@ -19,18 +20,17 @@ export const TsaButton: React.FC<TsaButtonProps> = ({
   ...rest
 }) => {
   return (
-    <Button
+    <CustomButton
       size={size}
       variant={variant}
       color="secondary"
       disableElevation
-      disableRipple
       startIcon={leftIcon}
       endIcon={rightIcon}
-      sx={{ textTransform: 'none' }}
+      // sx={variant === `outlined` ? { border: `1px solid #ffffff` } : null}
       {...rest}
     >
-      {name}
-    </Button>
+      <Typography textTransform={`capitalize`}>{name}</Typography>
+    </CustomButton>
   );
 };

@@ -12,6 +12,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    domains: ['techstudio.nyc3.cdn.digitaloceanspaces.com'],
+  },
 };
 
 const plugins = [

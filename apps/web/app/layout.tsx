@@ -1,7 +1,8 @@
-import './css.css';
+import './scss.scss';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from './globalTheme';
+import { theme } from '../../../scss/custom/globalTheme';
+import { TsaNavbar } from '@tsa/ui';
 
 export const metadata = {
   title: 'Welcome to web',
@@ -17,7 +18,20 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider options={{ key: 'css' }}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <TsaNavbar
+              courses={[
+                `Product Design UI/UX`,
+                `Fullstack Development`,
+                `Data Science`,
+                `Frontend Engineering`,
+                `Cyber Security`,
+                `Advance IG Marketing`,
+              ]}
+              navLinks={['About Us', 'FAQs', 'Contact Us']}
+            />
+            {children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

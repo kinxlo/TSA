@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tsa/ui": ["libs/ui/src/index.ts"]
+      "@tsa/ui": ["libs/ui/src/index.ts"],
+      "@tsa/ui/server": ["libs/ui/src/server.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

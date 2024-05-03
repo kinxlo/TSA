@@ -3,7 +3,7 @@ import { TsaNavbar } from '.';
 
 const meta: Meta<typeof TsaNavbar> = {
   component: TsaNavbar,
-  title: 'TsaNavbar',
+  title: 'Components/TsaNavbar',
   tags: ['autodocs'],
 };
 export default meta;
@@ -15,6 +15,13 @@ export const Base: Story = {
 export const BaseWithLinks: Story = {
   args: {
     navLinks: ['About Us', 'FAQs', 'Contact Us'],
-    courses: ['frontend', 'backend', 'full stack'],
+    courses: [
+      `Product Design UI/UX`,
+      `Fullstack Development`,
+      `Data Science`,
+      `Frontend Engineering`,
+      `Cyber Security`,
+      `Advance IG Marketing`,
+    ],
   },
 };

@@ -11,12 +11,27 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
+    // "paths": {
+    //   "@/components/*": [
+    //     "components/*"
+    //   ],
+    //   "@/styles/*": [
+    //     "styles/*"
+    //   ],
+    //   "@/assets/*": [
+    //     "./assets/*"
+    //   ]
+    //   // Add more aliases as needed
+    // },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "include": [
     "**/*.ts",
@@ -28,5 +43,10 @@
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
+  "exclude": [
+    "node_modules",
+    "jest.config.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }
