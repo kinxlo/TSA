@@ -21,7 +21,7 @@ export const TsaHero: React.FC<TsaHeroProps> = ({ content }) => {
           }}
         >
           <Box textAlign={{ xs: `center`, md: `initial` }}>
-            <Typography fontWeight={`bold`} variant={`h1`} mb={2}>
+            <Typography fontWeight={`bold`} variant={`h1`} mb={2} lineHeight={1.5}>
               Unlock Your Tech <br /> Potential With Us Today
             </Typography>
             <Typography>

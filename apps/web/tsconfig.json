@@ -1,5 +1,4 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
@@ -12,16 +11,7 @@
     "isolatedModules": true,
     "incremental": true,
     // "paths": {
-    //   "@/components/*": [
-    //     "components/*"
-    //   ],
-    //   "@/styles/*": [
-    //     "styles/*"
-    //   ],
-    //   "@/assets/*": [
-    //     "./assets/*"
-    //   ]
-    //   // Add more aliases as needed
+
     // },
     "plugins": [
       {
@@ -48,5 +38,6 @@
     "jest.config.ts",
     "**/*.spec.ts",
     "**/*.test.ts"
-  ]
+  ],
+  "extends": "../../tsconfig.base.json",
 }

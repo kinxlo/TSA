@@ -1,13 +1,12 @@
 import { Box } from '@mui/material';
+import { convertUnit as fn } from '@tsa/ui';
 import { TsaHero } from '@tsa/ui/server';
-// import { HOME_CONTENT } from '../content/home';
 
 export default function Home() {
-  // const { hero } = HOME_CONTENT;
   return (
     <>
-      <Box mt={`95px`}>
-        <TsaHero content={{}} />
+      <Box mt={fn.rem(96)}>
+        <TsaHero />
       </Box>
     </>
   );

@@ -23,7 +23,7 @@ export interface TsaNavDrawerProps extends TsaNavbarProps {
 
 // tsa drawer props
 export interface TsaHeroProps {
-  content: object;
+  content?: object;
 }
 
 //tsa wrapper props

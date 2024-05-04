@@ -1,12 +1,12 @@
-import accessbank from '@assets/images/access-bank.png';
-import btc from '@assets/images/btc.png';
-import joseph from '@assets/images/joseph.jpg';
-import peter from '@assets/images/peter.jpg';
-import pwc from '@assets/images/pwc.png';
-import rilwan from '@assets/images/rilwan.jpg';
-import stutern from '@assets/images/stutern.png';
-import ubabank from '@assets/images/uba.png';
-import interSwitch from '@assets/images/interswitch_pnp.png';
+import accessbank from '../assets/images/access-bank.png';
+import btc from '../assets/images/btc.png';
+import joseph from '../assets/images/joseph.jpg';
+import peter from '../assets/images/peter.jpg';
+import pwc from '../assets/images/pwc.png';
+import rilwan from '../assets/images/rilwan.jpg';
+import stutern from '../assets/images/stutern.png';
+import ubabank from '../assets/images/uba.png';
+import interSwitch from '../assets/images/interswitch_png.png';
 
 export const HOME_CONTENT = {
   hero: {
