@@ -46,7 +46,13 @@ export interface TsaCardIllustration_1Props extends CardProps {
 
 //tsa carousel illustration props
 export interface TsaCarouselProps extends SwiperProps {
-  courses: [];
+  courses: {
+    image: string;
+    imageLow: string;
+    title: string;
+    description: string;
+    path: string;
+  }[];
 }
 
 //tsa carousel card props
