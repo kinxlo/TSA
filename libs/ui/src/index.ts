@@ -2,4 +2,5 @@
 
 export * from './lib/components/Button';
 export * from './lib/components/Navbar';
+export * from './lib/views/What-we-offer';
 export * from './utils/fontsFn';

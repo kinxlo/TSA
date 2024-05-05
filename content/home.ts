@@ -1,12 +1,12 @@
-import accessbank from '../assets/images/access-bank.png';
-import btc from '../assets/images/btc.png';
-import joseph from '../assets/images/joseph.jpg';
-import peter from '../assets/images/peter.jpg';
-import pwc from '../assets/images/pwc.png';
-import rilwan from '../assets/images/rilwan.jpg';
-import stutern from '../assets/images/stutern.png';
-import ubabank from '../assets/images/uba.png';
-import interSwitch from '../assets/images/interswitch_png.png';
+// import accessbank from '../assets/images/access-bank.png';
+// import btc from '../assets/images/btc.png';
+// import joseph from '../assets/images/joseph.jpg';
+// import peter from '../assets/images/peter.jpg';
+// import pwc from '../assets/images/pwc.png';
+// import rilwan from '../assets/images/rilwan.jpg';
+// import stutern from '../assets/images/stutern.png';
+// import ubabank from '../assets/images/uba.png';
+// import interSwitch from '../assets/images/interswitch_png.png';
 
 export const HOME_CONTENT = {
   hero: {
@@ -115,7 +115,8 @@ technologies for learning.`,
       title: `LIFE AFTER TRAINING`,
       topic: `Where Our Graduates Work`,
       description: `Our talented graduates flourish in leading companies across the globe, making significant contributions to both their personal growth and the organizations they serve. They work in industries ranging from Information technology to Telecommunication, and more.`,
-      companies: [ubabank, accessbank, pwc, btc, stutern, interSwitch],
+      // companies: [ubabank, accessbank, pwc, btc, stutern, interSwitch],
+      companies: [],
     },
 
     body: {
@@ -126,7 +127,8 @@ technologies for learning.`,
           message: `I came into techStudio Academy with practically no prior knowledge in software development. However, within a few weeks, I was able to grasp the crux of software development and also master the soft skills required for being a software developer. So far so good, the skills acquired have given me a mind-blowing push in my career as a software developer.`,
 
           profile: {
-            image: joseph,
+            // image: joseph,
+            image: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1699879043/techstudio/images/joseph_avatar_a0tgts_jajfab_e50kee.jpg`,
             name: `JOSEPH DARAMOLA`,
             job: `Frontend Developer`,
           },
@@ -135,7 +137,8 @@ technologies for learning.`,
           message: `TechStudio Academy has been one of the big push I needed to get in the real world space. I had an immense learning that was really different from the self learning I started with. The learning was fun and there were some internship job opportunities that were presented to us. I got my first gig immediately after the program. Thank you TechStudio for that push I needed.`,
 
           profile: {
-            image: peter,
+            // image: peter,
+            image: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1699879043/techstudio/images/joseph_avatar_a0tgts_jajfab_e50kee.jpg`,
             name: `PETER EDEAWE`,
             job: `Software Developer`,
           },
@@ -144,7 +147,8 @@ technologies for learning.`,
           message: `I bless the day the Instagram algorithm pop up TechStudio Academy to my news feed. I read through their curriculum and other details about the Bootcamp and I told myself this is the opportunity I've been waiting for. I wasn't disappointed, the environment was well ventilated and conducive, with competent instructors. Here I am today at OT&T Consulting, fulfilling my dreams thanks to TechStudio Academy.`,
 
           profile: {
-            image: rilwan,
+            // image: rilwan,
+            image: `https://res.cloudinary.com/kingsleysolomon/image/upload/v1699879043/techstudio/images/joseph_avatar_a0tgts_jajfab_e50kee.jpg`,
             name: `RILWAN AJIBOLA`,
             job: `Software Developer`,
           },

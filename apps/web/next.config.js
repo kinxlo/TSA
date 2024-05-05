@@ -13,9 +13,11 @@ const nextConfig = {
     svgr: false,
   },
   images: {
-    domains: ['techstudio.nyc3.cdn.digitaloceanspaces.com'],
+    domains: [
+      `res.cloudinary.com`,
+      `techstudio.nyc3.cdn.digitaloceanspaces.com`,
+    ],
     // remotePatterns: ['techstudio.nyc3.cdn.digitaloceanspaces.com'],clar
-    
   },
 };
 

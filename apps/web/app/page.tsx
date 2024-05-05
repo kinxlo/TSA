@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { convertUnit as fn } from '@tsa/ui';
+import { WhatWeOffer, convertUnit as fn } from '@tsa/ui';
 import { TsaHero, WhyTechstudio } from '@tsa/ui/server';
 
 export default function Home() {
@@ -10,6 +10,9 @@ export default function Home() {
       </Box>
       <Box my={5}>
         <WhyTechstudio />
+      </Box>
+      <Box my={5}>
+        <WhatWeOffer />
       </Box>
     </>
   );

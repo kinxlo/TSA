@@ -4,6 +4,7 @@ import {
   CardProps,
   ContainerProps,
 } from '@mui/material';
+import { SwiperProps } from 'swiper/react';
 
 // tsa button props
 export interface TsaButtonProps extends ButtonProps {
@@ -41,5 +42,18 @@ export interface TsaCardIllustration_1Props extends CardProps {
   image?: string;
   title: string;
   description: string;
-  
+}
+
+//tsa carousel illustration props
+export interface TsaCarouselProps extends SwiperProps {
+  courses: [];
+}
+
+//tsa carousel card props
+export interface TsaCarouselCardProps {
+  content: {
+    image: string;
+    title: string;
+    description: string;
+  };
 }
