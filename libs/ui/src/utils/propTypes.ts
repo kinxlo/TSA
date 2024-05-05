@@ -1,4 +1,9 @@
-import { AppBarProps, ButtonProps, ContainerProps } from '@mui/material';
+import {
+  AppBarProps,
+  ButtonProps,
+  CardProps,
+  ContainerProps,
+} from '@mui/material';
 
 // tsa button props
 export interface TsaButtonProps extends ButtonProps {
@@ -29,4 +34,12 @@ export interface TsaHeroProps {
 //tsa wrapper props
 export interface TsaWrapperProps extends ContainerProps {
   children: React.ReactElement;
+}
+
+//tsa Card illustration props
+export interface TsaCardIllustration_1Props extends CardProps {
+  image?: string;
+  title: string;
+  description: string;
+  
 }

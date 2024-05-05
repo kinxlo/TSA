@@ -14,6 +14,10 @@ export const theme: Theme = createTheme({
 
     h1: {
       fontSize: fn.rem(32),
+      letterSpacing: fn.rem(0.5),
+      lineHeight: 1.5,
+      fontWeight: 700,
+      // color: `#1f2666`,
       '@media (min-width:600px)': {
         fontSize: fn.rem(44),
       },
@@ -23,6 +27,84 @@ export const theme: Theme = createTheme({
       '@media (min-width:1024px)': {
         fontSize: fn.rem(44),
       },
+    },
+    h2: {
+      color: `#1f2666`,
+      letterSpacing: fn.rem(0.5),
+      lineHeight: 1.5,
+      fontWeight: 700,
+      // '@media (min-width:600px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:900px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:1024px)': {
+      //   fontSize: fn.rem(44),
+      // },
+    },
+    h3: {
+      color: `#1f2666`,
+      letterSpacing: fn.rem(0.5),
+      lineHeight: 1.5,
+      fontWeight: 700,
+      // '@media (min-width:600px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:900px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:1024px)': {
+      //   fontSize: fn.rem(44),
+      // },
+    },
+    h4: {
+      color: `#1f2666`,
+      letterSpacing: fn.rem(0.5),
+      lineHeight: 1.5,
+      fontWeight: 600,
+      fontSize: fn.rem(26),
+      '@media (min-width:600px)': {},
+      '@media (min-width:900px)': {},
+      '@media (min-width:1024px)': {
+        fontSize: fn.rem(32),
+      },
+    },
+    h5: {
+      color: `#1f2666`,
+      letterSpacing: fn.rem(0.5),
+      lineHeight: 1.5,
+      fontWeight: 600,
+      // '@media (min-width:600px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:900px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:1024px)': {
+      //   fontSize: fn.rem(44),
+      // },
+    },
+    h6: {
+      color: `#1f2666`,
+      letterSpacing: fn.rem(0.5),
+      lineHeight: 1.5,
+      fontWeight: 600,
+      // '@media (min-width:600px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:900px)': {
+      //   fontSize: fn.rem(44),
+      // },
+      // '@media (min-width:1024px)': {
+      //   fontSize: fn.rem(44),
+      // },
+    },
+    // body1: {
+    //   color: `#1c1d1d`,
+    // },
+    body2: {
+      color: `#1c1d1d`,
     },
   },
   palette: {

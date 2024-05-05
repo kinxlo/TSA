@@ -4,7 +4,6 @@ import { Button, ButtonProps, Typography, styled } from '@mui/material';
 import { TsaButtonProps } from '../../../utils/propTypes';
 
 const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  color: theme.palette.secondary.contrastText,
   '&:hover': {
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.primary.contrastText,

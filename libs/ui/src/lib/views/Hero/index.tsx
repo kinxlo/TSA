@@ -21,7 +21,12 @@ export const TsaHero: React.FC<TsaHeroProps> = ({ content }) => {
           }}
         >
           <Box textAlign={{ xs: `center`, md: `initial` }}>
-            <Typography fontWeight={`bold`} variant={`h1`} mb={2} lineHeight={1.5}>
+            <Typography
+              fontWeight={`bold`}
+              variant={`h1`}
+              mb={2}
+              lineHeight={1.5}
+            >
               Unlock Your Tech <br /> Potential With Us Today
             </Typography>
             <Typography>
@@ -46,9 +51,10 @@ export const TsaHero: React.FC<TsaHeroProps> = ({ content }) => {
                 sx={{
                   width: fn.rem(176),
                   height: fn.rem(48),
+                  border: `1px solid #ffffff`,
                 }}
                 name={'Log in'}
-                variant={`outlined`}
+                variant={`text`}
               />
             </Stack>
           </Box>

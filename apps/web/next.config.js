@@ -14,6 +14,8 @@ const nextConfig = {
   },
   images: {
     domains: ['techstudio.nyc3.cdn.digitaloceanspaces.com'],
+    // remotePatterns: ['techstudio.nyc3.cdn.digitaloceanspaces.com'],clar
+    
   },
 };
 
