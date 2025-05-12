@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/no-null */
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
@@ -32,7 +31,7 @@ const useFAQStore = create<FAQState>()(
       set({ loading: true, error: null });
 
       try {
-        const response = await fetch(`${BASE_URL}/external/faq?page=${page}`, {
+        const response = await fetch(`${BASE_URL}/faq?page=${page}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

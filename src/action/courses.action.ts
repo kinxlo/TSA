@@ -2,16 +2,12 @@ import { EducationPrograms } from "~/app/(landing-routes)/courses/types/index.ty
 import useCoursesStore from "~/stores/course.store";
 import { Course } from "./services.type";
 
-/* eslint-disable unicorn/no-null */
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
 export async function getCourseData(slug: string): Promise<EducationPrograms> {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_LOCAL_URL}/api/courses.json`,
-    {
-      cache: "no-store",
-    },
-  );
+  const response = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_URL}/api/courses.json`, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Failed to fetch data");
@@ -19,10 +15,7 @@ export async function getCourseData(slug: string): Promise<EducationPrograms> {
 
   const data = await response.json();
 
-  const course = data.find(
-    (course: object) =>
-      Object.keys(course)[0].toLowerCase() === slug.toLowerCase(),
-  );
+  const course = data.find((course: object) => Object.keys(course)[0].toLowerCase() === slug.toLowerCase());
 
   if (!course) {
     throw new Error("Course not found");
@@ -38,7 +31,7 @@ export const fetchAllCourses = async () => {
   setError(null);
 
   try {
-    const response = await fetch(`${BASE_URL}/external/courses`, {
+    const response = await fetch(`${BASE_URL}/courses`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +44,7 @@ export const fetchAllCourses = async () => {
     }
 
     const data = await response.json();
-    setCourses(data.data);
+    setCourses(data.data.items);
   } catch (error: unknown) {
     if (error instanceof Error) {
       setError(error.message);
